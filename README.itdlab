@@ -1,0 +1,47 @@
+***
+**libftdi1isc version 1.5**
+***
+
+libftdi1isc has been modified from libftdi by ITDLab.
+
+libftdi1isc - A library (using libusb) to talk to FTDI's UART/FIFO chips
+including the popular bitbang mode.
+
+libftdi1isc requires libusb 1.x.
+
+# Changes
+
+ - We have removed some projects from original version of libftdi.  
+    - This source contains only libftdi1isc  
+	- Removed projects  
+	 - examples  
+	 - ftdi_eeprom  
+	 - ftdipp  
+	 - python  
+ - Its name has changed from libftdi1 to libftdi1isc.  
+ - It has been modified so that writes in transit do not interrupt reception.  
+    - file:ftdi_stream.c  
+     - function:ftdi_readstream()  
+     - modified:add if(activityCount > 10) for  
+	 - removed:Calculation of progress  
+
+# Quick start
+
+mkdir build
+cd build
+
+cmake -DCMAKE_INSTALL_PREFIX="/usr" ../  
+make  
+(Copy File src/libftdi1isc.so.2.5.0 to your desired location)  
+(Make link sudo ln -s .../libftdi1isc.so.2.5.0 .../libftdi1isc.so.2)  
+
+# Information
+
+We modified the following libftdi to create libftdiiac
+
+You'll find the original version of libftdi at:
+https://www.intra2net.com/en/developer/libftdi
+
+--------------------------------------------------------------------
+ITD Lab Corp.
+--------------------------------------------------------------------
