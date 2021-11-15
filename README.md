@@ -114,6 +114,3 @@ make install
 
 More verbose build instructions are in "README.build"
 
---------------------------------------------------------------------
-www.intra2net.com                             2003-2020 Intra2net AG
---------------------------------------------------------------------
